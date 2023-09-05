@@ -1,12 +1,13 @@
-import './App.css'
+import ColorBox from "./ColorBox";
+import SearchColor from "./SearchColor";
 
 function App() {
-  
   return (
-    <div>
-
+    <div className="App">
+      <ColorBox />
+      <SearchColor />
     </div>
   )
 }
 
-export default App
+export default App;
