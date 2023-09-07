@@ -1,10 +1,14 @@
 import React from 'react';
 import colorNames from 'colornames';
 
-const SearchColor = ({ colorValue, setColorValue, setHexValue }) => {
+const SearchColor = ({ 
+      colorValue, setColorValue, setHexValue,
+      isDarkText, setIsDarkText
+
+}) => {
   return (
-    <form className="searchForm" onSubmit={(e) => e.preventDefault()}>
-        <label htmlFor="search">color search</label>
+    <form onSubmit={(e) => e.preventDefault()}>
+        <label >color search</label>
         <input      
             autoFocus
             type="text" 
@@ -12,12 +16,18 @@ const SearchColor = ({ colorValue, setColorValue, setHexValue }) => {
             required
             value={colorValue}
             onChange={(e) => {
-                setColorValue(e.target.value); 
-                <br/>
+                setColorValue(e.target.value);  
                 setHexValue(colorNames(e.target.value));
             }
         }
-        />     
+        />
+        <button
+          className='toggle'
+          type='button'
+          onClick={() => setIsDarkText(!isDarkText)}
+        >
+          Toggle text Color
+        </button>     
    </form>
   )
 }

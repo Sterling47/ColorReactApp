@@ -1,13 +1,16 @@
 import React from 'react'
 
-const ColorBox = ({ colorValue, hexValue }) => {
+const ColorBox = ({ colorValue, hexValue, isDarkText }) => {
   return (
     <section
         className='colorBox'
-        style={{backgroundColor: colorValue}}
+        style={{
+          backgroundColor: colorValue,
+          color: isDarkText ? '#000' : '#FFF'
+        }}
     >
-       <p>{colorValue ? colorValue : "Empty Value"}</p>
-       <p>{hexValue ? hexValue : null} </p> 
+        <p>{colorValue ? colorValue : "Empty Value"}</p>
+        <p>{hexValue ? hexValue : null}</p> 
     </section>
   )
 }

@@ -23,9 +23,8 @@ body {
 }
 
 .colorBox {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  place-content: center;
   text-align: center;
   margin-top: 1rem;
   border: 2px rgb(29, 12, 12) solid;
@@ -54,3 +53,13 @@ input[type='text'] {
   border-radius: 0.25rem;
   outline: none;
 }
+
+.toggle {
+  margin-top: 1rem;
+  background-color: papayawhip;
+  color: #000;
+  height: 3rem;
+  width: 10rem;
+  border-radius: 10px;  
+}
+
