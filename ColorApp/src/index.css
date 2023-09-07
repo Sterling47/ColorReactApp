@@ -13,9 +13,12 @@ body {
 
 .App {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  flex-wrap: wrap;
+  
   gap: 1rem;
+  min-height: 100vh;
+
   
 }
 
@@ -24,18 +27,30 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
+  margin-top: 1rem;
   border: 2px rgb(29, 12, 12) solid;
   border-radius: 10px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   height: 15rem;
   width: 15rem; 
   background-color: white;
 }
 
-#search {
-  height: 3rem;
+form {
   width: 15rem;
-  border-radius: 10px;
-  font-size: 2rem;
-  text-align: center;
+}
+
+label {
+  position: absolute;
+  left: -999999px;
+
+}
+
+input[type='text'] {
+  margin-top: 0.5rem;
+  padding: 0.25em;
+  width: 15rem;
+  font-size: 1rem;
+  box-shadow: 2px 2px 5px #000;
+  border-radius: 0.25rem;
+  outline: none;
 }
