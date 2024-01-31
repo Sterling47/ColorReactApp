@@ -5,8 +5,8 @@ const SearchColor = ({
       colorValue, setColorValue, setHexValue,
       isDarkText, setIsDarkText
 
-}) => {
-  return (
+  }) => {
+    return (
     <form onSubmit={(e) => e.preventDefault()}>
         <label >color search</label>
         <input      
